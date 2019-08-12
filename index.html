@@ -2168,7 +2168,7 @@ $(function() {
     frb.activateCTA = function(){
         if ( validAmount && validMethod ) {
             $('#frb-continue, #frb-monthly-donate-yes, #frb-monthly-donate-no, #frb-donate-monthly-other').addClass('active');
-            if (validOptin) {
+            if (validOptin) {
                 $('#frb-donate').addClass('active');
             }
         } else {
@@ -2279,11 +2279,12 @@ $(function() {
         return false;
     });
 
-    /* Hide banner outside of main namespace (and Main Page, for sites where that isn't in main namespace) 
+    /* Hide banner outside of main namespace (and Main Page, for sites where that isn't in main namespace)
     if ( mw.config.get('wgNamespaceNumber') > 0 && !mw.config.get('wgIsMainPage') ) {
         mw.centralNotice.bannerData.hideResult = true;
         mw.centralNotice.bannerData.hideReason = 'namespace';
     }
+    Hide banner on mobile site, in case wrong device settings were chosen
     if ( mw.config.get('skin') === 'minerva' ) {
         mw.centralNotice.bannerData.hideResult = true;
         mw.centralNotice.bannerData.hideReason = 'other';
